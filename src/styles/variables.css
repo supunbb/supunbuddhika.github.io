@@ -1,0 +1,30 @@
+:root {
+    /* Nuetral Color Palette - Universal Pictures Inspired (Dark Mode) */
+    --bg-color: #0c0c0c;
+    /* Deep Off-Black */
+    --text-primary: #fcf8f5;
+    /* Warm Off-White */
+    --text-secondary: #9d9d9d;
+    /* Mid-Gray */
+    --accent-color: #1748f6;
+    /* Vibrant Blue */
+    --border-color: #333333;
+    /* Darker Gray for borders */
+    --card-bg: #1a1a1a;
+    /* Slightly lighter dark for cards */
+
+    /* Semantic Colors */
+    --link-color: var(--text-primary);
+    --success-color: #34c759;
+    --error-color: #ff3b30;
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* UI Tokens */
+    --radius-pill: 999px;
+    --radius-sm: 4px;
+}

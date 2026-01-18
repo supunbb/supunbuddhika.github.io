@@ -1,0 +1,75 @@
+{
+    "hero": {
+        "title": "About Me",
+        "subtitle": "UI/UX Engineer & Creative Problem Solver",
+        "description": "I bridge the gap between design and engineering, creating digital experiences that are not only visually stunning but also technically scalable. My journey involves working with various technologies and design principles to bring ideas to life.",
+        "image": "https://placehold.co/1200x600/1a1a1a/FFF?text=About+Hero+Image"
+    },
+    "experience": [
+        {
+            "id": 1,
+            "role": "Senior Product Designer",
+            "company": "Tech Corp",
+            "period": "2023 - Present",
+            "description": "Leading design system initiatives and product strategy for enterprise clients."
+        },
+        {
+            "id": 2,
+            "role": "UI/UX Designer",
+            "company": "Creative Agency",
+            "period": "2021 - 2023",
+            "description": "Designed high-conversion web and mobile interfaces for fintech and e-commerce sectors."
+        }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "degree": "BSc in Computer Science",
+            "institution": "University of Technology",
+            "period": "2017 - 2021",
+            "description": "Specialized in Human-Computer Interaction and Front-end Development."
+        },
+        {
+            "id": 2,
+            "degree": "Professional Diploma in UX Design",
+            "institution": "Design Institute",
+            "period": "2020",
+            "description": "Intensive coursework on user research, wireframing, and prototyping."
+        }
+    ],
+    "competitions": [
+        {
+            "id": 1,
+            "title": "Hackathon 2023 Winner",
+            "organizer": "Global Tech Summit",
+            "description": "Won 1st place for 'EcoTrack', a sustainable lifestyle app design."
+        },
+        {
+            "id": 2,
+            "title": "Best UI Design Award",
+            "organizer": "Creative Awards 2022",
+            "description": "Recognized for outstanding visual design in the fintech category."
+        }
+    ],
+    "volunteer": [
+        {
+            "id": 1,
+            "role": "Design Mentor",
+            "organization": "Design for Good",
+            "period": "2022 - Present",
+            "description": "Mentoring aspiring designers from underrepresented communities."
+        },
+        {
+            "id": 2,
+            "role": "Web Developer Volunteer",
+            "organization": "Local Non-Profit",
+            "period": "2019 - 2020",
+            "description": "Built and maintained the website for a local animal shelter."
+        }
+    ],
+    "banner": {
+        "title": "Let's build something amazing together.",
+        "cta": "Download CV",
+        "link": "/path-to-cv"
+    }
+}

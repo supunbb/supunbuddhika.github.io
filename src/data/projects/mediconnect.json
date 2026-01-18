@@ -1,0 +1,75 @@
+{
+    "id": "mediconnect",
+    "name": "MediConnect",
+    "category": "System Design",
+    "type": [
+        "Patient Mobile App",
+        "Doctor Web Portal"
+    ],
+    "year": "2024",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600",
+    "description": "Patients struggled to find specialists and book appointments, resulting in high drop-off rates and missed care opportunities.",
+    "heroImage": "https://via.placeholder.com/1200x600/f0f0f0/cccccc?text=MediConnect+Hero+Image",
+    "overview": {
+        "Role": "UX Researcher & Designer",
+        "Platform": "Mobile (iOS/Android)",
+        "Year": "2024",
+        "Tools": "Figma, Prototyping",
+        "Timeline": "6 Months"
+    },
+    "context": {
+        "description": "A telehealth platform connecting elderly patients with specialists.",
+        "users": "Elderly Patients (65+), Doctors",
+        "usage": "Mobile app for patients, tablet/web for doctors."
+    },
+    "problem": {
+        "statement": "High booking abandonment rate due to complex UI.",
+        "core": "40% of users dropped off at the 'Insurance Verification' step.",
+        "painPoints": [
+            "Small text size",
+            "Confusing navigation",
+            "Too many steps to book"
+        ]
+    },
+    "goals": {
+        "primary": "Increase booking conversion by 25%.",
+        "success": "Reduced support calls regarding 'how to book' by 50%."
+    },
+    "constraints": [
+        "HIPAA compliance is mandatory.",
+        "Large font sizes requirement."
+    ],
+    "decisions": [
+        {
+            "title": "Voice Assistant Integration",
+            "desc": "Added voice search to help users with limited dexterity."
+        },
+        {
+            "title": "Simplified Stepper",
+            "desc": "Broke the booking process into single-question screens."
+        }
+    ],
+    "uxFlow": {
+        "primary": "Search Specialty -> Select Doctor -> Confirm Slot -> Payment.",
+        "edge": "Doctor unavailable notification."
+    },
+    "solution": [
+        {
+            "title": "Booking Flow",
+            "caption": "Large touch targets and high contrast for accessibility.",
+            "image": "https://via.placeholder.com/800x500/f5f5f7/999999?text=Booking+Flow"
+        }
+    ],
+    "system": {
+        "tokens": "Custom accessible color palette.",
+        "structure": "Component library focused on inputs and navigation."
+    },
+    "outcome": {
+        "impact": "Booking completion rate rose to 85%.",
+        "quote": "\"My grandmother can finally book her own appointments.\""
+    },
+    "learnings": [
+        "Testing with the actual demographic (65+) revealed issues we never guessed.",
+        "Trust signals are crucial in healthcare apps."
+    ]
+}

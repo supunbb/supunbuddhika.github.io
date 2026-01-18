@@ -1,0 +1,94 @@
+{
+    "id": "shiftly",
+    "name": "Shiftly",
+    "category": "Attendance Management System",
+    "type": [
+        "Employee Mobile App",
+        "Manager & Admin Web Dashboards"
+    ],
+    "year": "2025",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600",
+    "description": "Managing attendance, breaks, and leave across multiple branches was manual, error-prone, and lacked real-time visibility.",
+    "heroImage": "https://via.placeholder.com/1200x600/f0f0f0/cccccc?text=Shiftly+Hero+Image",
+    "overview": {
+        "Role": "Lead UX/UI Designer",
+        "Platform": "Mobile App & Web Dashboard",
+        "Year": "2025",
+        "Tools": "Figma, Linear, React",
+        "Timeline": "3 Months"
+    },
+    "context": {
+        "description": "Shiftly is a workforce management tool for retail and hospitality chains. Managers needed a way to track distributed terms, while employees needed a simple way to clock in and view schedules.",
+        "users": "Retail Store Managers, Shift Employees, HR Admins",
+        "usage": "Mobile app for employees (on-the-go); Web dashboard for managers (back-office)."
+    },
+    "problem": {
+        "statement": "The existing manual process for tracking attendance was causing payroll errors and lack of operational visibility.",
+        "core": "Managers spent 10+ hours/week reconciling timesheets manually.",
+        "painPoints": [
+            "Buddy punching (employees clocking in for others)",
+            "Missed breaks leading to labor law violations",
+            "No real-time view of who is currently working"
+        ]
+    },
+    "goals": {
+        "primary": "Reduce payroll processing time by 50%.",
+        "secondary": "Eliminate time theft and ensure break compliance.",
+        "success": "Adoption rate of 90% within the first month of rollout."
+    },
+    "constraints": [
+        "Limited budget for hardware (must work on employee's own devices).",
+        "Offline mode required for stores with poor internet connection.",
+        "Must integrate with legacy payroll systems."
+    ],
+    "decisions": [
+        {
+            "title": "Geofencing Validation",
+            "desc": "We implemented GPS geofencing to validate clock-ins, eliminating the need for expensive biometric hardware while preventing time theft."
+        },
+        {
+            "title": "simplified 'One-Tap' Actions",
+            "desc": "Design the employee interface with massive, unmistakable buttons for primary actions to speed up the queue during shift changes."
+        },
+        {
+            "title": "Dark Mode for Battery Life",
+            "desc": "Since employees use their own phones, we prioritized a dark-mode-first design to save battery and reduce glare in back-of-house environments."
+        }
+    ],
+    "uxFlow": {
+        "entry": "Push notification reminder 15 mins before shift.",
+        "primary": "Open App -> Verify Location -> Clock In -> View Schedule.",
+        "edge": "Offline Mode: Data caches locally and syncs when connection restores."
+    },
+    "solution": [
+        {
+            "title": "Employee Home Screen",
+            "caption": "The primary action is front and center. The status bar changes color (Green/Red) to give immediate feedback on clock status.",
+            "image": "https://via.placeholder.com/800x500/f5f5f7/999999?text=Employee+Home+Screen"
+        },
+        {
+            "title": "Manager Dashboard",
+            "caption": "A bird's-eye view of all active branches. Managers can approve overtime requests with a single click.",
+            "image": "https://via.placeholder.com/800x500/f5f5f7/999999?text=Manager+Dashboard"
+        },
+        {
+            "title": "Schedule View",
+            "caption": "Drag-and-drop shift scheduling with conflict detection (e.g., overlapping shifts or overtime warnings).",
+            "image": "https://via.placeholder.com/800x500/f5f5f7/999999?text=Schedule+View"
+        }
+    ],
+    "system": {
+        "tokens": "Inter font family, Primary Blue (#0066FF), Semantic Safety Colors.",
+        "structure": "Atomic design structure with shared atoms between Web and Mobile to ensure brand consistency."
+    },
+    "outcome": {
+        "impact": "Payroll errors reduced by 95% in the first quarter.",
+        "efficiency": "Manager admin time cut from 10 hours to 2 hours per week.",
+        "quote": "\"Shiftly has completely transformed how we manage our floor staff. It's invisible and just works.\""
+    },
+    "learnings": [
+        "Hardware-free solutions require robust fallback mechanisms (what if GPS fails?).",
+        "Front-line workers value speed over feature density.",
+        "Simplifying the 'Happy Path' is more critical than covering every edge case in v1."
+    ]
+}

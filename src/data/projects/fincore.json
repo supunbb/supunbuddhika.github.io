@@ -1,0 +1,75 @@
+{
+    "id": "fincore",
+    "name": "FinCore",
+    "category": "Product Design",
+    "type": [
+        "Customer Web Portal",
+        "Admin Data Visualization"
+    ],
+    "year": "2024",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600",
+    "description": "Complex financial data visualization was overwhelming for users, leading to poor decision-making and slow workflows.",
+    "heroImage": "https://via.placeholder.com/1200x600/f0f0f0/cccccc?text=FinCore+Hero+Image",
+    "overview": {
+        "Role": "Product Designer",
+        "Platform": "Web Dashboard",
+        "Year": "2024",
+        "Tools": "Figma, React D3",
+        "Timeline": "4 Months"
+    },
+    "context": {
+        "description": "FinCore provides real-time financial analytics for SME owners. The previous version was cluttered and hard to read.",
+        "users": "Business Owners, Financial Analysts",
+        "usage": "Desktop web dashboard for in-depth analysis."
+    },
+    "problem": {
+        "statement": "Users couldn't quickly identify cash flow trends due to poor data visualization.",
+        "core": "Time to insight was over 5 minutes per session.",
+        "painPoints": [
+            "Cluttered graphs",
+            "Hidden export features",
+            "Lack of mobile responsiveness"
+        ]
+    },
+    "goals": {
+        "primary": "Reduce time to insight to under 30 seconds.",
+        "success": "NPS score increase by 20 points."
+    },
+    "constraints": [
+        "Must use existing API endpoints.",
+        "Strict color accessibility requirements (WCAG AAA)."
+    ],
+    "decisions": [
+        {
+            "title": "Progressive Disclosure",
+            "desc": "Show high-level metrics first, with ability to drill down into details."
+        },
+        {
+            "title": "Semantic Coloring",
+            "desc": "Used distinct color palettes for income vs expenses to reduce cognitive load."
+        }
+    ],
+    "uxFlow": {
+        "primary": "Login -> Dashboard Overview -> Drill down into specific report -> Export PDF.",
+        "edge": "Empty states for new businesses with no data."
+    },
+    "solution": [
+        {
+            "title": "Dashboard Overview",
+            "caption": "Clean, card-based layout showing key health metrics at a glance.",
+            "image": "https://via.placeholder.com/800x500/f5f5f7/999999?text=Dashboard+Overview"
+        }
+    ],
+    "system": {
+        "tokens": "Material UI customization.",
+        "structure": "Feature-based module structure."
+    },
+    "outcome": {
+        "impact": "User retention increased by 15%.",
+        "quote": "\"Finally, a dashboard that makes sense immediately.\""
+    },
+    "learnings": [
+        "Data visualization requires testing with real data sets, not just Lorem Ipsum.",
+        "Accessibility in charts is challenging but essential."
+    ]
+}

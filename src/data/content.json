@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "title": "Hi, I’m Supun",
+        "subtitle": "UI/UX Engineer",
+        "description": "I design and build clear, scalable digital products with a focus on usability, systems, and attention to detail.",
+        "ctaPrimary": {
+            "text": "View Projects",
+            "link": "/projects"
+        },
+        "ctaSecondary": {
+            "text": "Download CV",
+            "link": "/path-to-cv"
+        }
+    },
+    "contact": {
+        "title": "Let's work together.",
+        "description": "I'm currently available for new projects and collaborations. If you have a project in mind or just want to chat, feel free to reach out.",
+        "cta": {
+            "text": "Get in Touch",
+            "email": "hello@supun.com"
+        },
+        "socials": [
+            {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com"
+            },
+            {
+                "name": "Email",
+                "url": "mailto:hello@supun.com"
+            },
+            {
+                "name": "Behance",
+                "url": "https://behance.net"
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "Supun.",
+        "links": [
+            {
+                "text": "LinkedIn",
+                "url": "#"
+            },
+            {
+                "text": "GitHub",
+                "url": "#"
+            },
+            {
+                "text": "Behance",
+                "url": "#"
+            }
+        ]
+    }
+}

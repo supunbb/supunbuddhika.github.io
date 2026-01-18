@@ -1,0 +1,102 @@
+/* Google Antigravity Inspired Typography System */
+:root {
+    /* Font Family - Inter is a clean and modern sans-serif */
+    --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Scale */
+    --fs-xs: 0.875rem;
+    /* 14px */
+    --fs-sm: 1rem;
+    /* 16px */
+    --fs-base: 1.1rem;
+    /* ~17.5px - Matches Antigravity body */
+    --fs-lg: 1.5rem;
+    /* 24px - Antigravity intro */
+    --fs-xl: 2.625rem;
+    /* ~42px - Antigravity H2 */
+    --fs-2xl: 3.5rem;
+    /* 56px */
+    --fs-3xl: 5rem;
+    /* ~80px - Antigravity H1 */
+
+    /* Weights */
+    --fw-light: 300;
+    --fw-regular: 400;
+    /* Antigravity Body */
+    --fw-medium: 500;
+    /* Closest to Antigravity's 450 weight */
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line Heights */
+    --lh-tight: 1.1;
+    /* Headings */
+    --lh-base: 1.5;
+    /* Body */
+
+    /* Letter Spacing */
+    --ls-tight: -0.04em;
+    /* ~ -0.7px at larger sizes */
+    --ls-base: 0.01em;
+    /* ~ 0.18px */
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-base);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--fw-medium);
+    /* Antigravity uses 450, we use 500 */
+    line-height: var(--lh-tight);
+    color: var(--text-primary);
+    letter-spacing: var(--ls-tight);
+    /* Tight spacing for headings */
+}
+
+.heading-xl {
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-medium);
+    letter-spacing: -0.05em;
+    /* Tighter for very large text */
+}
+
+.heading-lg {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-medium);
+}
+
+.heading-md {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+}
+
+.text-body {
+    font-size: var(--fs-base);
+    color: var(--text-secondary);
+}
+
+.text-intro {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+    color: var(--text-primary);
+}
+
+.nav-link {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-base);
+}
