@@ -62,9 +62,8 @@ const ProjectCard = ({ project }) => {
             }}>
                 {/* Bottom Info */}
                 <div>
-                    <h3 style={{
+                    <h3 className="h4" style={{
                         color: '#fff',
-                        fontSize: '1.5rem',
                         fontWeight: 700,
                         marginBottom: '4px',
                         lineHeight: 1.2
@@ -110,7 +109,7 @@ const ProjectCard = ({ project }) => {
 const ProjectGrid = () => {
     const projects = getAllProjects();
     return (
-        <section className="container" style={{ paddingBottom: 'var(--spacing-xl)' }}>
+        <section className="container" style={{ padding: 'var(--section-padding) 0' }}>
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',

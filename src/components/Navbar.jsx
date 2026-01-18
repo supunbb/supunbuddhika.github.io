@@ -26,7 +26,7 @@ const Navbar = () => {
       left: 0,
       right: 0,
       zIndex: 1000,
-      backgroundColor: scrolled ? 'rgba(12, 12, 12, 0.9)' : 'transparent',
+      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.8)' : 'transparent',
       backdropFilter: scrolled ? 'blur(10px)' : 'none',
       transition: 'all 0.3s ease',
       borderBottom: scrolled ? '1px solid var(--border-color)' : '1px solid transparent'
@@ -35,9 +35,7 @@ const Navbar = () => {
         <Link to="/" style={{ fontWeight: 700, fontSize: '1.2rem', textDecoration: 'none', color: 'var(--text-primary)' }}>Supun.</Link>
 
         <div style={{ display: 'flex', gap: 'var(--spacing-lg)', justifyContent: 'center' }}>
-          <Link to="/projects" style={{ color: 'var(--text-primary)', fontWeight: 500 }}>Projects</Link>
-          <Link to="/about" style={{ color: 'var(--text-primary)', fontWeight: 500 }}>About</Link>
-          <Link to="/contact" style={{ color: 'var(--text-primary)', fontWeight: 500 }}>Contact</Link>
+          {/* Links removed as per user request */}
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'flex-end' }}>

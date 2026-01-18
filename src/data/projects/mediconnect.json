@@ -2,6 +2,7 @@
     "id": "mediconnect",
     "name": "MediConnect",
     "category": "System Design",
+    "cardColor": "#f0fdf4",
     "type": [
         "Patient Mobile App",
         "Doctor Web Portal"

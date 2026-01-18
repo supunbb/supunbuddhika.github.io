@@ -3,110 +3,148 @@ import { Link } from 'react-router-dom';
 import { getAllProjects } from '../utils/projects';
 
 const FeaturedCard = ({ project }) => {
+    // Default sky blue background if no color is provided
+    const cardBg = project.cardColor || '#e2f3ff';
+
     return (
-        <div className="featured-card" style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', // Two equal columns
-            gap: 'var(--spacing-xl)',
+        <Link to={`/case-study/${project.id}`} className="featured-card" style={{
+            position: 'relative',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-end',
+            minHeight: '650px',
+            padding: 'var(--spacing-xl)',
+            borderRadius: '32px',
+            overflow: 'hidden',
+            backgroundColor: cardBg,
+            // Subtle sky-like gradient
+            backgroundImage: 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.02) 100%)',
+            textDecoration: 'none',
+            color: '#000000',
+            transition: 'transform 0.5s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.5s ease',
             marginBottom: 'var(--spacing-xl)',
-            alignItems: 'center',
-            backgroundColor: 'var(--card-bg)', // Optional: subtle background for the whole card if needed, or keeping it clean
-            borderRadius: '16px',
-            overflow: 'hidden'
-        }}>
-            {/* Left Column: Content */}
-            <div style={{ padding: 'var(--spacing-lg)' }}>
-                <h3 className="heading-lg" style={{
-                    marginBottom: 'var(--spacing-sm)',
-                    lineHeight: 1.1
-                }}>
-                    {project.name}
-                </h3>
-
-                <div style={{
-                    fontSize: '0.9rem',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px',
-                    color: 'var(--text-secondary)',
-                    marginBottom: 'var(--spacing-md)'
-                }}>
-                    {project.category}
-                </div>
-
-                <p className="text-body" style={{
-                    marginBottom: 'var(--spacing-md)',
-                    maxWidth: '90%'
-                }}>
-                    {project.description}
-                </p>
-
-                {/* Product Type (Two Lines) */}
-                <div style={{ marginBottom: 'var(--spacing-md)' }}>
-                    {Array.isArray(project.type) ? project.type.map((line, idx) => (
-                        <div key={idx} style={{
-                            fontSize: '1rem',
-                            fontWeight: 500,
-                            color: 'var(--text-primary)',
-                            lineHeight: 1.4
-                        }}>
-                            {line}
-                        </div>
-                    )) : (
-                        <div style={{ fontSize: '1rem', fontWeight: 500 }}>{project.type}</div>
-                    )}
-                    <span style={{
-                        display: 'block',
-                        fontSize: '0.9rem',
-                        color: 'var(--text-secondary)',
-                        marginTop: '8px'
-                    }}>
-                        {project.year}
-                    </span>
-                </div>
-
-                <Link to={`/case-study/${project.id}`} style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    fontSize: '1rem',
-                    fontWeight: 600,
-                    color: 'var(--accent-color)',
-                    textDecoration: 'none',
-                    marginTop: 'var(--spacing-sm)'
-                }}>
-                    View Case Study <span style={{ marginLeft: '8px' }}>&rarr;</span>
-                </Link>
-            </div>
-
-            {/* Right Column: Visual */}
-            <div style={{ height: '400px', width: '100%' }}>
+            border: '1px solid rgba(0,0,0,0.05)'
+        }}
+            onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-10px)';
+                e.currentTarget.style.boxShadow = '0 40px 80px rgba(0,0,0,0.12)';
+            }}
+            onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+            }}
+        >
+            {/* Visual Element (Mockup/Image) */}
+            <div style={{
+                position: 'absolute',
+                top: '45%',
+                left: '50%',
+                transform: 'translate(-50%, -50%) rotate(-4deg)',
+                width: '85%',
+                maxWidth: '700px',
+                zIndex: 1,
+                transition: 'transform 0.7s cubic-bezier(0.2, 1, 0.3, 1)'
+            }} className="card-visual">
                 <img
                     src={project.image}
                     alt={project.name}
                     style={{
                         width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        borderRadius: '16px', // Rounded corners as requested
-                        boxShadow: '0 4px 20px rgba(0,0,0,0.2)' // Subtle shadow, not heavy
+                        height: 'auto',
+                        borderRadius: '16px',
+                        boxShadow: '0 30px 60px rgba(0,0,0,0.2)'
                     }}
                 />
             </div>
 
+            {/* Bottom Content Overlay */}
+            <div style={{ position: 'relative', zIndex: 10 }}>
+                <h3 style={{
+                    fontSize: 'var(--fs-h1)',
+                    fontWeight: 700,
+                    marginBottom: 'var(--spacing-sm)',
+                    letterSpacing: '-0.02em',
+                    color: '#000000'
+                }}>
+                    {project.name}
+                </h3>
+                <p style={{
+                    fontSize: 'var(--fs-body-lg)',
+                    color: 'rgba(0,0,0,0.75)',
+                    maxWidth: '550px',
+                    lineHeight: '1.4',
+                    marginBottom: 'var(--spacing-lg)'
+                }}>
+                    {project.description}
+                </p>
+
+                {/* Metadata Pills */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                    {Array.isArray(project.type) ? project.type.map((t, i) => (
+                        <span key={i} style={{
+                            padding: '10px 20px',
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            borderRadius: 'var(--radius-pill)',
+                            fontSize: 'var(--fs-body-sm)',
+                            fontWeight: 500,
+                            color: '#000000',
+                            backdropFilter: 'blur(8px)',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                            border: '1px solid rgba(0,0,0,0.05)'
+                        }}>
+                            {t}
+                        </span>
+                    )) : (
+                        <span style={{
+                            padding: '10px 20px',
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            borderRadius: 'var(--radius-pill)',
+                            fontSize: 'var(--fs-body-sm)',
+                            fontWeight: 500,
+                            color: '#000000',
+                            backdropFilter: 'blur(8px)',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                            border: '1px solid rgba(0,0,0,0.05)'
+                        }}>
+                            {project.type}
+                        </span>
+                    )}
+                    {/* Category pill - now styled the same as others */}
+                    <span style={{
+                        padding: '10px 20px',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderRadius: 'var(--radius-pill)',
+                        fontSize: 'var(--fs-body-sm)',
+                        fontWeight: 500,
+                        color: '#000000',
+                        backdropFilter: 'blur(8px)',
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                        border: '1px solid rgba(0,0,0,0.05)'
+                    }}>
+                        {project.category}
+                    </span>
+                </div>
+            </div>
+
             <style>{`
+                .featured-card:hover .card-visual {
+                    transform: translate(-50%, -55%) rotate(-2deg) scale(1.03) !important;
+                }
                 @media (max-width: 768px) {
                     .featured-card {
-                        grid-template-columns: 1fr !important;
-                        gap: var(--spacing-md) !important;
+                        min-height: 500px !important;
+                        padding: var(--spacing-lg) !important;
                     }
-                    .featured-card > div:nth-child(2) {
-                        height: 250px !important;
-                        order: -1; /* Image on top on mobile */
+                    .card-visual {
+                        width: 95% !important;
+                        top: 40% !important;
                     }
                 }
             `}</style>
-        </div>
+        </Link>
     );
 };
+
 
 const FeaturedProjects = () => {
     const projects = getAllProjects();
@@ -114,10 +152,9 @@ const FeaturedProjects = () => {
     const featuredProjects = projects.slice(0, 3);
 
     return (
-        <section className="container" style={{ padding: 'var(--spacing-xl) 0' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: 'var(--spacing-xl)' }}>
-                <h2 className="heading-xl">Featured Projects</h2>
-                <Link to="/projects" style={{ color: 'var(--text-secondary)', textDecoration: 'underline' }}>View All Projects</Link>
+        <section className="container" style={{ padding: 'var(--section-padding) 0' }}>
+            <div style={{ textAlign: 'center', marginBottom: 'var(--spacing-xl)' }}>
+                <h2 className="heading-lg">Featured Projects</h2>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
@@ -125,6 +162,8 @@ const FeaturedProjects = () => {
                     <FeaturedCard key={project.id} project={project} />
                 ))}
             </div>
+
+            {/* View All Projects button removed as per user request */}
         </section>
     );
 };

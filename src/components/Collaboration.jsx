@@ -8,7 +8,7 @@ const Collaboration = () => {
     ];
 
     return (
-        <section className="container" style={{ padding: 'var(--spacing-xl) var(--spacing-md)', textAlign: 'center' }}>
+        <section className="container" style={{ padding: 'var(--section-padding) 0', textAlign: 'center' }}>
             <p style={{
                 fontSize: '0.9rem',
                 color: 'var(--text-secondary)',

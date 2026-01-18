@@ -5,47 +5,59 @@ const Contact = () => {
     const { contact } = content;
 
     return (
-        <section className="container" style={{ padding: 'var(--spacing-xl) 0', textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
-            <h2 className="heading-lg" style={{ marginBottom: 'var(--spacing-md)' }}>{contact.title}</h2>
-            <p className="text-body" style={{ marginBottom: 'var(--spacing-lg)' }}>
-                {contact.description}
-            </p>
+        <section style={{
+            position: 'relative',
+            backgroundColor: 'var(--bg-color)',
+            padding: '160px 0',
+            borderTop: '1px solid var(--border-color)'
+        }}>
+            <div className="container" style={{
+                position: 'relative',
+                zIndex: 2,
+                textAlign: 'center',
+                maxWidth: '800px',
+                margin: '0 auto'
+            }}>
+                <h2 className="heading-xl" style={{ marginBottom: 'var(--spacing-md)', color: 'var(--text-primary)' }}>{contact.title}</h2>
+                <p className="text-body" style={{ marginBottom: 'var(--spacing-lg)', color: 'var(--text-secondary)', fontSize: 'var(--fs-body-lg)' }}>
+                    {contact.description}
+                </p>
 
-            <a
-                href={`mailto:${contact.cta.email}`}
-                style={{
-                    display: 'inline-block',
-                    padding: '16px 40px',
-                    backgroundColor: 'var(--accent-color)',
-                    color: '#ffffff',
-                    fontSize: '1rem',
-                    textTransform: 'uppercase',
-                    letterSpacing: '1px',
-                    borderRadius: 'var(--radius-pill)',
-                    fontWeight: 600,
-                    marginBottom: 'var(--spacing-xl)',
-                    transition: 'transform 0.2s ease, opacity 0.2s ease'
-                }}
-                onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.opacity = '0.9'; }}
-                onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.opacity = '1'; }}
-            >
-                {contact.cta.text}
-            </a>
-
-            <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-lg)', marginTop: 'var(--spacing-md)' }}>
-                {contact.socials.map((social, index) => (
+                <div style={{ marginBottom: 'var(--spacing-xl)' }}>
                     <a
-                        key={index}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: 'var(--text-primary)', fontWeight: 500, borderBottom: '1px solid transparent', transition: 'border-color 0.2s' }}
-                        onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--text-primary)'}
-                        onMouseOut={(e) => e.currentTarget.style.borderColor = 'transparent'}
+                        href="mailto:wwmsupunbbandara@gmail.com"
+                        className="heading-md"
+                        style={{
+                            color: 'var(--accent-color)',
+                            textDecoration: 'none',
+                            fontWeight: 700,
+                            display: 'inline-block',
+                            transition: 'opacity 0.2s ease'
+                        }}
+                        onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'}
+                        onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
                     >
-                        {social.name}
+                        wwmsupunbbandara@gmail.com
                     </a>
-                ))}
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--spacing-lg)', marginTop: 'var(--spacing-md)' }}>
+                    {contact.socials
+                        .filter(social => ['LinkedIn', 'Behance'].includes(social.name))
+                        .map((social, index) => (
+                            <a
+                                key={index}
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: 'var(--text-primary)', fontWeight: 500, borderBottom: '1px solid transparent', transition: 'border-color 0.2s', textDecoration: 'none' }}
+                                onMouseOver={(e) => e.currentTarget.style.borderColor = 'var(--text-primary)'}
+                                onMouseOut={(e) => e.currentTarget.style.borderColor = 'transparent'}
+                            >
+                                {social.name}
+                            </a>
+                        ))}
+                </div>
             </div>
         </section>
     );

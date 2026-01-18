@@ -2,6 +2,7 @@
     "id": "fincore",
     "name": "FinCore",
     "category": "Product Design",
+    "cardColor": "#fdf2f8",
     "type": [
         "Customer Web Portal",
         "Admin Data Visualization"

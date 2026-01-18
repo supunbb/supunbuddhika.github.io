@@ -35,7 +35,7 @@ const CaseStudy = () => {
     }
 
     return (
-        <article className="container" style={{ padding: 'var(--spacing-xl) var(--spacing-md)', maxWidth: '1000px', margin: '0 auto' }}>
+        <article className="container" style={{ padding: 'var(--section-padding) var(--spacing-md)', maxWidth: '1000px', margin: '0 auto' }}>
             {/* Navigation */}
             <Link to="/" style={{
                 display: 'inline-block',
@@ -55,7 +55,7 @@ const CaseStudy = () => {
                 <h1 className="heading-xl" style={{ marginBottom: 'var(--spacing-md)', lineHeight: 1.1 }}>
                     {data.name}
                 </h1>
-                <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto var(--spacing-lg)' }}>
+                <p style={{ fontSize: 'var(--fs-body-lg)', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto var(--spacing-lg)' }}>
                     {data.description}
                 </p>
                 <div style={{
@@ -85,8 +85,8 @@ const CaseStudy = () => {
                 }}>
                     {Object.entries(data.overview).map(([key, value]) => (
                         <div key={key}>
-                            <h4 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '4px' }}>{key}</h4>
-                            <div style={{ fontSize: '1rem', fontWeight: 500 }}>{value}</div>
+                            <h4 style={{ fontSize: 'var(--fs-body-sm)', color: 'var(--text-secondary)', marginBottom: '4px' }}>{key}</h4>
+                            <div style={{ fontSize: 'var(--fs-body-md)', fontWeight: 500 }}>{value}</div>
                         </div>
                     ))}
                 </section>
@@ -102,11 +102,11 @@ const CaseStudy = () => {
                         <p style={TEXT_STYLE}>{data.context.description}</p>
                         <div style={{ marginTop: 'var(--spacing-md)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--spacing-md)' }}>
                             <div>
-                                <h4 style={{ fontSize: '0.9rem' }}>Users</h4>
+                                <h4 style={{ fontSize: 'var(--fs-body-sm)' }}>Users</h4>
                                 <p style={TEXT_STYLE}>{data.context.users}</p>
                             </div>
                             <div>
-                                <h4 style={{ fontSize: '0.9rem' }}>Usage Environment</h4>
+                                <h4 style={{ fontSize: 'var(--fs-body-sm)' }}>Usage Environment</h4>
                                 <p style={TEXT_STYLE}>{data.context.usage}</p>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ const CaseStudy = () => {
                         <div style={{ display: 'grid', gap: 'var(--spacing-lg)' }}>
                             {data.decisions.map((d, i) => (
                                 <div key={i}>
-                                    <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>{d.title}</h3>
+                                    <h3 style={{ fontSize: 'var(--fs-h5)', marginBottom: '8px' }}>{d.title}</h3>
                                     <p style={TEXT_STYLE}>{d.desc}</p>
                                 </div>
                             ))}
@@ -204,7 +204,7 @@ const CaseStudy = () => {
                                     <img src={s.image} alt={s.title} style={{ maxWidth: '100%', borderRadius: '8px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }} />
                                 </div>
                                 <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                                    <h3 style={{ fontSize: '1.25rem', marginBottom: '4px' }}>{s.title}</h3>
+                                    <h3 style={{ fontSize: 'var(--fs-h5)', marginBottom: '4px' }}>{s.title}</h3>
                                     <p style={TEXT_STYLE}>{s.caption}</p>
                                 </div>
                             </div>
@@ -235,20 +235,20 @@ const CaseStudy = () => {
                             {data.outcome.impact && (
                                 <div style={{ padding: 'var(--spacing-lg)', backgroundColor: '#E3F2FD', borderRadius: '8px', color: '#0D47A1' }}>
                                     <div style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '4px' }}>Impact</div>
-                                    <div style={{ fontSize: '0.9rem' }}>{data.outcome.impact}</div>
+                                    <div style={{ fontSize: 'var(--fs-body-sm)' }}>{data.outcome.impact}</div>
                                 </div>
                             )}
                             {data.outcome.efficiency && (
                                 <div style={{ padding: 'var(--spacing-lg)', backgroundColor: '#E8F5E9', borderRadius: '8px', color: '#1B5E20' }}>
                                     <div style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '4px' }}>Efficiency</div>
-                                    <div style={{ fontSize: '0.9rem' }}>{data.outcome.efficiency}</div>
+                                    <div style={{ fontSize: 'var(--fs-body-sm)' }}>{data.outcome.efficiency}</div>
                                 </div>
                             )}
                         </div>
                         <blockquote style={{
                             borderLeft: '4px solid var(--text-primary)',
                             paddingLeft: 'var(--spacing-md)',
-                            fontSize: '1.25rem',
+                            fontSize: 'var(--fs-body-lg)',
                             fontStyle: 'italic',
                             margin: 'var(--spacing-lg) 0'
                         }}>
@@ -284,12 +284,12 @@ const CaseStudy = () => {
                 display: 'flex',
                 justifyContent: 'space-between'
             }}>
-                <Link to={`/case-study/${prevProject.id}`} style={{ fontSize: '1.1rem', fontWeight: 600, textDecoration: 'none', color: 'var(--text-primary)' }}>
-                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>&larr; Previous</span>
+                <Link to={`/case-study/${prevProject.id}`} style={{ fontSize: 'var(--fs-body-lg)', fontWeight: 600, textDecoration: 'none', color: 'var(--text-primary)' }}>
+                    <span style={{ color: 'var(--text-secondary)', fontSize: 'var(--fs-body-sm)', display: 'block', marginBottom: '4px' }}>&larr; Previous</span>
                     {prevProject.name}
                 </Link>
-                <Link to={`/case-study/${nextProject.id}`} style={{ fontSize: '1.1rem', fontWeight: 600, textAlign: 'right', textDecoration: 'none', color: 'var(--text-primary)' }}>
-                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'block', marginBottom: '4px' }}>Next &rarr;</span>
+                <Link to={`/case-study/${nextProject.id}`} style={{ fontSize: 'var(--fs-body-lg)', fontWeight: 600, textAlign: 'right', textDecoration: 'none', color: 'var(--text-primary)' }}>
+                    <span style={{ color: 'var(--text-secondary)', fontSize: 'var(--fs-body-sm)', display: 'block', marginBottom: '4px' }}>Next &rarr;</span>
                     {nextProject.name}
                 </Link>
             </nav>

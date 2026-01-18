@@ -21,11 +21,11 @@ const ListItem = ({ title, subtitle, period, description }) => (
         onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
     >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', marginBottom: 'var(--spacing-sm)' }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--text-primary)' }}>{title}</h3>
-            {period && <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontFamily: 'monospace' }}>{period}</span>}
+            <h3 style={{ fontSize: 'var(--fs-h5)', fontWeight: 600, color: 'var(--text-primary)' }}>{title}</h3>
+            {period && <span style={{ fontSize: 'var(--fs-body-sm)', color: 'var(--text-secondary)', fontFamily: 'monospace' }}>{period}</span>}
         </div>
-        {subtitle && <div style={{ color: 'var(--accent-color)', fontWeight: 500, marginBottom: 'var(--spacing-sm)', fontSize: '0.95rem' }}>{subtitle}</div>}
-        <p className="text-body" style={{ fontSize: '0.95rem' }}>{description}</p>
+        {subtitle && <div style={{ color: 'var(--accent-color)', fontWeight: 500, marginBottom: 'var(--spacing-sm)', fontSize: 'var(--fs-body-md)' }}>{subtitle}</div>}
+        <p className="text-body" style={{ fontSize: 'var(--fs-body-md)' }}>{description}</p>
     </div>
 );
 
@@ -35,18 +35,18 @@ const About = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="container" style={{ padding: 'var(--spacing-xl) 0', maxWidth: '800px' }}>
+            <section className="container" style={{ padding: 'var(--section-padding) 0', maxWidth: '800px' }}>
                 <h1 className="heading-xl" style={{ marginBottom: 'var(--spacing-md)' }}>{hero.title}</h1>
                 <h2 className="heading-lg" style={{ color: 'var(--text-secondary)', marginBottom: 'var(--spacing-md)' }}>{hero.subtitle}</h2>
-                <p className="text-body" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+                <p className="text-body" style={{ fontSize: 'var(--fs-body-lg)', lineHeight: '1.8' }}>
                     {hero.description}
                 </p>
             </section>
 
-            <div className="container" style={{ maxWidth: '800px', paddingBottom: 'var(--spacing-xl)' }}>
+            <div className="container" style={{ maxWidth: '800px', paddingBottom: 'var(--section-padding)' }}>
 
                 {/* Experience Section */}
-                <section style={{ marginBottom: 'var(--spacing-xl)' }}>
+                <section style={{ marginBottom: 'var(--section-padding)' }}>
                     <SectionHeader title="Experience" />
                     {experience.map(item => (
                         <ListItem
@@ -60,7 +60,7 @@ const About = () => {
                 </section>
 
                 {/* Education Section */}
-                <section style={{ marginBottom: 'var(--spacing-xl)' }}>
+                <section style={{ marginBottom: 'var(--section-padding)' }}>
                     <SectionHeader title="Education" />
                     {education.map(item => (
                         <ListItem
@@ -74,7 +74,7 @@ const About = () => {
                 </section>
 
                 {/* Competitions Section */}
-                <section style={{ marginBottom: 'var(--spacing-xl)' }}>
+                <section style={{ marginBottom: 'var(--section-padding)' }}>
                     <SectionHeader title="Competitions & Awards" />
                     {competitions.map(item => (
                         <ListItem
@@ -87,7 +87,7 @@ const About = () => {
                 </section>
 
                 {/* Volunteer Section */}
-                <section style={{ marginBottom: 'var(--spacing-xl)' }}>
+                <section style={{ marginBottom: 'var(--section-padding)' }}>
                     <SectionHeader title="Volunteer Work" />
                     {volunteer.map(item => (
                         <ListItem
@@ -105,7 +105,7 @@ const About = () => {
             {/* Final Banner */}
             <section style={{
                 backgroundColor: 'var(--card-bg)',
-                padding: 'var(--spacing-xl) 0',
+                padding: 'var(--section-padding) 0',
                 textAlign: 'center',
                 borderTop: '1px solid var(--border-color)',
                 borderBottom: '1px solid var(--border-color)'

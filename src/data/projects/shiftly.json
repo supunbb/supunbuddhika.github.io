@@ -2,6 +2,7 @@
     "id": "shiftly",
     "name": "Shiftly",
     "category": "Attendance Management System",
+    "cardColor": "#e2f3ff",
     "type": [
         "Employee Mobile App",
         "Manager & Admin Web Dashboards"

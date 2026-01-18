@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer style={{ marginTop: 'var(--spacing-xl)', padding: 'var(--spacing-lg) 0', borderTop: '1px solid var(--border-color)' }}>
+        <footer style={{ padding: 'var(--spacing-lg) 0' }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div className="text-secondary">
                     &copy; {new Date().getFullYear()} Supun.
